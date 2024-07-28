@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>  Task 2 </title>
+    <link rel="stylesheet" href="task2.css">
+</head>
+<body>
+    <form id="inputForm">
+        <label for="textInput">Your Number</label>
+        <input type="text" id="textInput" maxlength="10" required pattern="\d{10}">
+
+        <label for="emailInput"> Your Email</label>
+        <input type="email" id="emailInput" required multiple>
+
+        <label for="numberInput">Your Age</label>
+        <input type="number" id="numberInput" value="1" min="1" required>
+
+        <label for="passwordInput">Password</label>
+        <input type="password" id="passwordInput" required>
+        
+        <button type="submit">login</button>
+        <button type="button" id="disableButton">Disable</button>
+    </form>
+
+    <script>
+        document.getElementById('disableButton').addEventListener('click', function() {
+            document.getElementById('textInput').disabled = true;
+            document.getElementById('emailInput').disabled = true;
+        });
+    </script>
+</body>
+</html>
